@@ -83,6 +83,10 @@ O KNN tenta classificar cada amostra de um conjunto de dados avaliando sua dist�
 
 A métrica utilizada para o cálculo das distância entre os pontos, foi a distância euclidiana, cuja a fórmula é apresentada logo abaixo:
 
+<div align="center">
+<img src="img/origem.png" />
+</div>
+
 O resultado das previsões realizadas pelo modelo, são apresentadas na forma de matriz de confusão.
 
 <div align="center">
@@ -101,6 +105,10 @@ Conclui-se:
 Bernoulli-Naive-Bayes é um método de machine learning que usa as frequências das ocorrências em uma base de dados para prever uma variável de interesse. Seu nome vem do modelo estatístico bayesiano, que diz que o grau com que se deve acreditar em uma afirmação vai ser ligeiramente alterado por novas evidências. [4]
 
 A fórmula probabilística utilizada pelo modelo é apresentado a seguir:
+
+<div align="center">
+<img src="img/origem.png" />
+</div>
 
 O resultado das previsões realizadas pelo modelo, são apresentadas na forma de matriz de confusão.
 
@@ -141,19 +149,62 @@ Conclui-se:
 
 # 4. Métricas de validação
 
+Para cada um dos modelos testados, as três métricas de validação foram aplicadas.
+
+## 4.1 Acurácia
+
+Os resultados obtidos foram:
+
+* A acurácia do modelo KNN é de 81.48%;  
+* A acurácia do modelo BNB é de 75.43%;  
+* A acurácia do modelo de árvore de decisão é de 80.77%.
+
+Considerando a métrica de acurácia, o modelo com melhor desempenho foi o KNN, com 81.48%.
+
+## 4.2 Precisão
+
+Os resultados obtidos foram:
+
+* A precisão do modelo KNN é de 79.72%;  
+* A precisão do modelo BNB é de 71.29%;  
+* A precisão do modelo de árvore de decisão é de 79.73%.
+
+Com base na métrica de precisão, o modelo selecionado seria o da árvore de decisão, com 79.73%. Vale ressaltar o bom desempenho do modelo KNN para essa métrica, com 79.72%.
+
+## 4.3 Recall
+
+Os resultados obtidos foram:
+
+* A métrica Recall do modelo KNN é de 83.92%;  
+* A métrica Recall do modelo BNB é de 84.24%;  
+* A métrica Recall do modelo de árvore de decisão é de 81.97%.
+
+A métrica Recall, aponta o modelo de Bernoulli-Naive-Bayes, como o melhor modelo, com 84.24%.
 
 # 5. Selecionando o modelo
 
+A métrica de precisão foi selecionada, para esse projeto. A proposta é definir as características dos clientes, que deixaram de fazer parte da empresa de telecomunicações, para assim, tomar decisões pra diminuir essa taxa de evasão.
+
+Essa métrica, leva em consideração os valores positivos que foram previstos de forma correta como um todo pelo modelo, sendo sua fórmula representada pela quantidade de verdadeiros positivos (acertos), dividido pela soma dos falsos positivos com os verdadeiros positivos, (Total predito como verdadeiro). Sendo assim, fornece a taxa de acerto em relação aos clientes que abandonaram a empresa. O objetivo é justamente reduzir essa taxa de evasão.
+
+O modelo então deve prever bem, esse tipo de cliente.
+
 # 6. Conclusão
+
+O modelo de árvore de decisão foi o selecionado para esse projeto, com uma taxa de acerto de 79.73%, de acordo com a métrica de validação de precisão.
+
+A razão pela escolha dessa métric, e consequentemente, desse modelo, se deve a fórmula que leva em consideração a quntidade de acertos dividido pelo número de previsões totais.
+
+Com a aplicação do modelo, foi definido, que a nova cliente, Maria, permanecerá com a empresa.
 
 # 7. Referências
 
-[1]
+[1] MACHADO, Emerson Lopes. LADEIRA, Marcelo. Um Estudo de Limpeza em Base de Dados Desbalanceada com Sobreposição de Classes. Departamento de Ciência da Computação – Universidade de Brasília (UnB). Brasília – DF. p. 2. Ago. 2023. 
 
 [2] https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.StandardScaler.html
 
-[3]
+[3] BOCCATO, Levy. ATTUX, Romis. K-Nearest-Neighbor. – DCA/FEEC/UNICAMP. Campinas - SP. p. 1-9. Ago. 2023.
 
 [4] https://www.ibm.com/br-pt/topics/supervised-learning
 
-[5]
+[5] LAURETTO. Marcelo S. Árvores de decisão. EACH-USP. São Paulo - SP. p. 2-3. Ago. 2023.
