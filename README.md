@@ -18,8 +18,16 @@ E três métricas de validação serão utilizadas:
 
 A partir disso, um modelo será selecionado, para definir se uma nova cliente, com o nome de Maria, irá permanecer ou não com a empresa.
 
+# Sumário
 
-
+* [1. Base de dados](##1-Base-de-dados)
+* [2. Tratamento de dados](##2-tratamento-de-dados)
+* [3. Implementação dos modelos](##3-análise-dos-idiomas-originais)
+* [4. Métricas de validação](##4-análise-notas)
+* [5. Selecionando o modelo](##6-conclusao)
+* [6. Conclusão](##6-conclusao)
+* [7. Referências](##6-conclusao)
+    
 # 1. Base de dados
 
 A base de dados utilizada para esse projeto, foi obtida da plataforma Kaggle, e está disponível no link abaixo:
