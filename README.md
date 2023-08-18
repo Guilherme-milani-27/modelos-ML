@@ -56,7 +56,7 @@ A primeira etapa do processo de tratamento de dados, foi a transformação de va
 A segunda etapa, foi o balanceamento dos dados da classe 'Churn', referente a taxa de evasão dos clientes da empresa. Como mostra o gráfico a seguir, há aproximadamente 5000 dados com valor 0, e aproximadamente 2000 com valor 1, o que caracteriza um desbalanceio:
 
 <div align="center">
-<img src="img/origem.png" />
+<img src="img/desbalanco1.png" />
 </div>
 
 A técnica de balanceamento de dados utilizada foi a 'Oversampling', que consiste em realizar a criação de novas observações da classe quando há menos amostras, tendo como objetivo igualar a proporção entre as categorias. Para esse caso, a técnica SMOTE* foi escolhida.
@@ -64,7 +64,7 @@ A técnica de balanceamento de dados utilizada foi a 'Oversampling', que consist
 O gráfico abaixo, mostra o balanceamento dos dados, após a aplicação da técnica SMOTE:
 
 <div align="center">
-<img src="img/origem.png" />
+<img src="img/balanco.png" />
 </div>
 
 Por fim, a normalização dos dados foi realizada, com o método 'StandardScaler*'.
@@ -84,13 +84,13 @@ O KNN tenta classificar cada amostra de um conjunto de dados avaliando sua dist�
 A métrica utilizada para o cálculo das distância entre os pontos, foi a distância euclidiana, cuja a fórmula é apresentada logo abaixo:
 
 <div align="center">
-<img src="img/origem.png" />
+<img src="img/euclidiana.png" />
 </div>
 
 O resultado das previsões realizadas pelo modelo, são apresentadas na forma de matriz de confusão.
 
 <div align="center">
-<img src="img/origem.png" />
+<img src="img/mc_knn.png" />
 </div>
 
 Conclui-se:
@@ -107,13 +107,13 @@ Bernoulli-Naive-Bayes é um método de machine learning que usa as frequências 
 A fórmula probabilística utilizada pelo modelo é apresentado a seguir:
 
 <div align="center">
-<img src="img/origem.png" />
+<img src="img/bnb.png" />
 </div>
 
 O resultado das previsões realizadas pelo modelo, são apresentadas na forma de matriz de confusão.
 
 <div align="center">
-<img src="img/origem.png" />
+<img src="img/mc_bnb.png" />
 </div>
 
 Conclui-se:
@@ -136,7 +136,7 @@ O critério adotado para aferir a qualidade da divisão dos nós, foi a entropia
 O resultado das previsões realizadas pelo modelo, são apresentadas na forma de matriz de confusão.
 
 <div align="center">
-<img src="img/origem.png" />
+<img src="img/mc_dtc.png" />
 </div>
 
 Conclui-se: 
@@ -153,6 +153,12 @@ Para cada um dos modelos testados, as três métricas de validação foram aplic
 
 ## 4.1 Acurácia
 
+A fórmula para cálculo da acurácia é apresentada abaixo. É representada pela soma dos verdadeiros positivos com os verdadeiros negativos (acertos totais), dividido pelo valor total de previsões.
+
+<div align="center">
+<img src="img/acuracia.png" />
+</div>
+
 Os resultados obtidos foram:
 
 * A acurácia do modelo KNN é de 81.48%;  
@@ -163,6 +169,12 @@ Considerando a métrica de acurácia, o modelo com melhor desempenho foi o KNN, 
 
 ## 4.2 Precisão
 
+A fórmula para cálculo da precisão é apresentada abaixo. É representada pelos verdadeiros positivos (acertos em relação ao parâmetro a ser previsto), dividido pela soma dos verdadeiros positivos e falsos verdadeiros (previsão total em relação ao valor verdadeiro).
+
+<div align="center">
+<img src="img/precisao.png" />
+</div>
+
 Os resultados obtidos foram:
 
 * A precisão do modelo KNN é de 79.72%;  
@@ -172,6 +184,12 @@ Os resultados obtidos foram:
 Com base na métrica de precisão, o modelo selecionado seria o da árvore de decisão, com 79.73%. Vale ressaltar o bom desempenho do modelo KNN para essa métrica, com 79.72%.
 
 ## 4.3 Recall
+
+A fórmula para cálculo de recall é apresentada abaixo. É representada pelos verdadeiros positivos (acertos em relação ao parâmetro a ser previsto), dividido pela soma dos verdadeiros positivos e falsos negativos (todos os reais valores previstos).
+
+<div align="center">
+<img src="img/recall.jpeg" />
+</div>
 
 Os resultados obtidos foram:
 
